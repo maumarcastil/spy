@@ -10,6 +10,8 @@ function MyApp({ Component, pageProps }) {
         <title>spy</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"/>
+
       </Head>
 
       <Component {...pageProps} />
@@ -36,7 +38,7 @@ function MyApp({ Component, pageProps }) {
                     color: ${colors.primary}
                 }
 
-                button {
+                .button {
                     width: 100%;
                     padding: .4rem;
                     outline: none;
@@ -47,15 +49,50 @@ function MyApp({ Component, pageProps }) {
                     background-color: ${colors.primary};
                     border: 1px solid rgba(209, 213, 219);
                     border-radius: .2rem;
-                    transition: background-color .7s;
+                    transition: background-color .5s;
                     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1)
                     
                 }
 
-                button:hover {
+                .animacion:hover {
                         color: ${colors.primary};
                         background-color: white;
                         outline: none;
+                }
+
+                .animacion-github:hover{
+                        color: #000;
+                        background-color: white;
+                        outline: none;
+                }
+
+                button > svg{
+                  display: inline-block;
+                  fill: #fff;
+                  margin-right: .5rem;
+                }
+
+                .animacion-github:hover > svg{
+                  fill: #000;
+                }              
+
+                .separator{
+                  color: #999;
+                  font-size: .875em;
+                  width: 100%;
+                  text-align: center;
+                  margin: 0;
+                  padding: 0;
+                  margin-bottom: 12px;
+                  height: 12px;      
+                }
+
+                .separator span{
+                    color: ${colors.primary}
+                }
+
+                .bg-github{
+                  background: #000000
                 }
 
             `}</style>

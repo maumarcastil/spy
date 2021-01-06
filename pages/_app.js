@@ -28,7 +28,33 @@ function MyApp({ Component, pageProps }) {
                 }
 
                 input {
-                  color: ${colors.primary}
+                    outline: none;
+                    width: 100%;
+                    border: 1px solid rgba(209, 213, 219);
+                    border-radius: .2rem;
+                    padding: .3rem;
+                    color: ${colors.primary}
+                }
+
+                button {
+                    width: 100%;
+                    padding: .4rem;
+                    outline: none;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+
+                    color: white;
+                    background-color: ${colors.primary};
+                    border: 1px solid rgba(209, 213, 219);
+                    border-radius: .2rem;
+                    transition: background-color .7s;
+                    
+                }
+
+                button:hover {
+                        color: ${colors.primary};
+                        background-color: white;
+                        outline: none;
                 }
 
             `}</style>

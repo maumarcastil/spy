@@ -15,16 +15,16 @@ const Login = () => {
                     <div className="grid grid-rows-3 gap-5">
                         <div>
                             <label htmlFor="username" class="block text-lg font-medium ">Username</label>
-                            <input type="text" name="username" id="username" autocomplete="given-name" class="border border-gray-300 w-full p-2 rounded text-lg outline-none" />
+                            <input type="text" name="username" id="username" autocomplete="given-name" class="" />
                         </div>
 
                         <div>
                             <label htmlFor="password" class="block text-lg font-medium ">Password</label>
-                            <input type="password" name="password" id="password" autocomplete="given-name" class="border border-gray-300 w-full p-2 rounded text-lg outline-none" />
+                            <input type="password" name="password" id="password" autocomplete="given-name" class="" />
                         </div>
 
                         <div>
-                            <button type="submit" className="w-full p-2 rounded text-lg font-semibold outline-none cursor-pointer|| border border-gray-300 shadow-lg">Ingresar</button>
+                            <button type="submit" className="">Ingresar</button>
                         </div>
                     </div>
                 </div>
@@ -32,21 +32,8 @@ const Login = () => {
             </main>
 
             <style jsx>{`
-                button {
-                    background-color: ${colors.primary};
-                    color: white;
-                    transition: background-color .5s;
-                    outline: none;
-                }
-                button:hover {
-                        color: ${colors.primary};
-                        background-color: white;
-                }
 
-                button:focus {
-                        color: ${colors.primary};
-                        background-color: white;
-                }
+                
 
             `}</style>
 

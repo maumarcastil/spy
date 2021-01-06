@@ -48,6 +48,7 @@ function MyApp({ Component, pageProps }) {
                     border: 1px solid rgba(209, 213, 219);
                     border-radius: .2rem;
                     transition: background-color .7s;
+                    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1)
                     
                 }
 

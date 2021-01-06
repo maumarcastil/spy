@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { colors } from "../../styles/theme";
 
 
 const Login = () => {
@@ -13,22 +14,44 @@ const Login = () => {
                     <br />
                     <div className="grid grid-rows-3 gap-5">
                         <div>
-                            <label for="username" class="block text-lg font-medium ">Username</label>
+                            <label htmlFor="username" class="block text-lg font-medium ">Username</label>
                             <input type="text" name="username" id="username" autocomplete="given-name" class="border border-gray-300 w-full p-2 rounded text-lg outline-none" />
                         </div>
 
                         <div>
-                            <label for="password" class="block text-lg font-medium ">Password</label>
+                            <label htmlFor="password" class="block text-lg font-medium ">Password</label>
                             <input type="password" name="password" id="password" autocomplete="given-name" class="border border-gray-300 w-full p-2 rounded text-lg outline-none" />
                         </div>
 
                         <div>
-                            <button type="submit" className="w-full p-2 rounded text-lg font-semibold outline-none bg-primary text-white cursor-pointer">Ingresar</button>
+                            <button type="submit" className="w-full p-2 rounded text-lg font-semibold outline-none cursor-pointer|| border border-gray-300 shadow-lg">Ingresar</button>
                         </div>
                     </div>
                 </div>
 
             </main>
+
+            <style jsx>{`
+                button {
+                    background-color: ${colors.primary};
+                    color: white;
+                    transition: background-color .5s;
+                    outline: none;
+                }
+                button:hover {
+                        color: ${colors.primary};
+                        background-color: white;
+                }
+
+                button:focus {
+                        color: ${colors.primary};
+                        background-color: white;
+                }
+
+            `}</style>
+
+
+
         </>
     );
 }

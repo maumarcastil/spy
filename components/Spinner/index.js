@@ -1,17 +1,14 @@
-import Head from 'next/head';
-import React from 'react';
+import React from "react"
 
 const Spinner = () => {
   return (
     <>
-
-        <div className="spinner">
-          <div className="cube1"></div>
-          <div className="cube2"></div>
-        </div>
+      <div className="spinner">
+        <div className="cube1"></div>
+        <div className="cube2"></div>
+      </div>
 
       <style jsx>{`
-
         .spinner {
           margin: 100px auto;
           width: 40px;

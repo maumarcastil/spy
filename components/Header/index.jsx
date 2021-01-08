@@ -1,37 +1,33 @@
-import Head from 'next/head';
+import Head from "next/head"
+import Link from "next/link"
 
-import Link from 'next/link';
+// Imports firebase
+import { singOut } from "firebase/client"
 
-const Header = () => {
-    return (
-        <>
-            <header className="flex justify-between items-center h-16 font-mono p-4 shadow-lg">
+const Header = ({ user }) => {
 
-                <div className="text-2xl font-bold tracking-wide text-primary">
-                    <a href="">Spy</a>
-                </div>
+  const handleClick = () =>{
+    singOut()
+      
+  }
 
-                <div className="grid grid-flow-col gap-3 text-lg font-bold text-primary">
-                    <div>
-                        <Link href="/home">
-                            Home
-                        </Link>
-                    </div>
-                    <div>
-                        <Link href="/home">
-                            Abougt
-                        </Link>
-                    </div>
-                    <div>
-                        <Link href="/Login">
-                            Login
-                        </Link>
-                    </div>
-                </div>
+  return (
+    <>
+      <header className="flex justify-between items-center h-16 font-mono p-4 shadow-lg">
+        <div className="text-2xl font-bold tracking-wide text-primary">
+          <a href="">Spy</a>
+        </div>
 
-            </header>
-        </>
-    );
+        <div className="grid grid-flow-col gap-3 text-lg font-bold text-primary">
+          <div>
+              <label
+              onClick={handleClick}
+              >Logout</label>
+          </div>
+        </div>
+      </header>
+    </>
+  )
 }
 
-export default Header;
+export default Header

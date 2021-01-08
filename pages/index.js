@@ -6,6 +6,7 @@ import { recoveryLoginWithGithub } from "firebase/client"
 
 // imports components
 import FormularioLogin from "components/FormularioLogin"
+import Spinner from "components/Spinner/index"
 
 export default function Home() {
   const [user, setUser] = useState(undefined)
@@ -28,8 +29,8 @@ export default function Home() {
   return (
     <main className="container h-screen flex justify-center items-center">
       <div className="w-full p-20">
-      <FormularioLogin setUser={setUser} />
-        {/* {spinner ? <Spinner /> : <FormularioLogin setUser={setUser} />} */}
+      {/* <FormularioLogin setUser={setUser} /> */}
+        {spinner ? <Spinner /> : <FormularioLogin setUser={setUser} />}
       </div>
     </main>
   )
